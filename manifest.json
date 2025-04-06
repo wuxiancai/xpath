@@ -1,0 +1,35 @@
+{
+  "name": "XPath Helper",
+  "version": "1.0.0",
+  "description": "在网页上测试XPath表达式的工具",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "default_title": "XPath Helper"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "notifications",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}

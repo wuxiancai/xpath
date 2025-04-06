@@ -1,0 +1,85 @@
+#xpath-helper-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.xpath-helper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px 5px 0 0;
+}
+
+.xpath-helper-header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+  padding: 0 8px;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.xpath-helper-header button:hover {
+  color: #333;
+}
+
+.xpath-helper-content {
+  padding: 12px;
+}
+
+.xpath-helper-input-group {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#xpath-expression {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#xpath-evaluate {
+  padding: 6px 12px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.xpath-helper-results {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+#xpath-matches {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.xpath-result-item {
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.xpath-result-item:last-child {
+  border-bottom: none;
+}

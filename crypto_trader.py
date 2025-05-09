@@ -2150,6 +2150,8 @@ class CryptoTrader:
                         # 执行卖出YES操作
                         self.only_sell_yes()
                         self.logger.info("卖完 Up 后，再卖 Down")
+                        time.sleep(2)
+                        self.driver.refresh()
                         # 卖 NO 之前先检查是否有 NO 标签
                         if self.find_position_label_no():
                             self.only_sell_no()
@@ -2206,7 +2208,8 @@ class CryptoTrader:
                         # 卖完 Down 后，自动再卖 Up                      
                         self.only_sell_no()
                         self.logger.info("卖完 Down 后，再卖 Up")
-
+                        time.sleep(2)
+                        self.driver.refresh()
                         if self.find_position_label_yes():
                             self.only_sell_yes()
                         else:
